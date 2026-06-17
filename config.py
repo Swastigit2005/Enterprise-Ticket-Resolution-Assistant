@@ -8,12 +8,11 @@ GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 # ==========================================
 
 MYSQL_CONFIG = {
-    "host": "localhost",
-    "user": "root",
-    "password": "Pihu@123",
-    "database": "ticket_system"
+    "host": os.getenv("MYSQL_HOST"),
+    "user": os.getenv("MYSQL_USER"),
+    "password": os.getenv("MYSQL_PASSWORD"),
+    "database": os.getenv("MYSQL_DATABASE")
 }
-
 # ==========================================
 # CHROMADB CONFIG
 # ==========================================
