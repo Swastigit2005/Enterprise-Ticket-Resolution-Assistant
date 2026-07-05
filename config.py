@@ -1,48 +1,82 @@
 import os
+import configparser
+
 from dotenv import load_dotenv
 
 load_dotenv()
+
+config = configparser.ConfigParser()
+config.read("config.ini")
+
+# =====================================================
+# API KEY
+# =====================================================
+
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
-# ==========================================
-# MYSQL CONFIG
-# ==========================================
+
+# =====================================================
+# SERVER
+# =====================================================
+
+API_URL = config["SERVER"]["API_URL"]
+
+# =====================================================
+# MYSQL
+# =====================================================
 
 MYSQL_CONFIG = {
-    "host": os.getenv("MYSQL_HOST"),
-    "user": os.getenv("MYSQL_USER"),
-    "password": os.getenv("MYSQL_PASSWORD"),
-    "database": os.getenv("MYSQL_DATABASE")
+    "host": config["DATABASE"]["HOST"],
+    "user": config["DATABASE"]["USER"],
+    "password": config["DATABASE"]["PASSWORD"],
+    "database": config["DATABASE"]["DATABASE"],
 }
-# ==========================================
-# CHROMADB CONFIG
-# ==========================================
 
-CHROMA_DB_PATH = "./chroma_db"
-COLLECTION_NAME = "ticket_resolutions"
+# =====================================================
+# LOGIN
+# =====================================================
 
-# ==========================================
-# EMBEDDING MODEL
-# ==========================================
+ADMIN_USERNAME = config["LOGIN"]["ADMIN_USERNAME"]
+ADMIN_PASSWORD = config["LOGIN"]["ADMIN_PASSWORD"]
 
-EMBEDDING_MODEL = "Qwen/Qwen3-Embedding-0.6B"
+ADVOCATE_USERNAME = config["LOGIN"]["ADVOCATE_USERNAME"]
+ADVOCATE_PASSWORD = config["LOGIN"]["ADVOCATE_PASSWORD"]
 
-# ==========================================
-# RETRIEVAL CONFIG
-# ==========================================
+# =====================================================
+# CHROMA
+# =====================================================
 
-TOP_K = 3
+CHROMA_DB_PATH = config["CHROMA"]["DB_PATH"]
+COLLECTION_NAME = config["CHROMA"]["COLLECTION_NAME"]
 
-SIMILARITY_THRESHOLD = 0.80
-CONFIDENCE_THRESHOLD = 0.80
+# =====================================================
+# EMBEDDING
+# =====================================================
 
+EMBEDDING_MODEL = config["LLM"]["EMBEDDING_MODEL"]
 
+# =====================================================
+# LLM
+# =====================================================
 
-GROQ_MODEL = "llama-3.3-70b-versatile"
+GROQ_MODEL = config["LLM"]["MODEL"]
 
+# =====================================================
+# RETRIEVAL
+# =====================================================
 
-# ==========================================
+TOP_K = int(config["RETRIEVAL"]["TOP_K"])
+
+SIMILARITY_THRESHOLD = float(
+    config["RETRIEVAL"]["SIMILARITY_THRESHOLD"]
+)
+
+CONFIDENCE_THRESHOLD = float(
+    config["RETRIEVAL"]["CONFIDENCE_THRESHOLD"]
+)
+
+# =====================================================
 # DELTA QUERY
-# ==========================================
+# =====================================================
 
 DELTA_QUERY = """
 SELECT
@@ -52,5 +86,6 @@ SELECT
     resolution_steps
 FROM tickets
 WHERE ingested = FALSE
-AND status = 'Resolved'
+AND status='Resolved'
 """
+

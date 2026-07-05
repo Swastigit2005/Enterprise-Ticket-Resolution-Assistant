@@ -1,15 +1,7 @@
-from logger import logger
 import streamlit as st
-from config import (
-    API_URL,
-    ADMIN_USERNAME,
-    ADMIN_PASSWORD,
-    ADVOCATE_USERNAME,
-    ADVOCATE_PASSWORD,
-)
 
 st.set_page_config(
-    page_title="Service Ticket Resolver",
+    page_title="AutoKBase",
     page_icon="🧠",
     layout="wide"
 )
@@ -114,11 +106,11 @@ div[data-testid="stTextInput"] label{
 <div class="login-card">
 
 <div class="login-logo">
-STR
+AK
 </div>
 
 <div class="login-title">
-Service Ticket Resolver
+AutoKBase
 </div>
 
 <div class="login-sub">
@@ -145,29 +137,20 @@ AI-powered knowledge reuse for managed services operations
         ):
 
             if (
-                username == ADMIN_USERNAME
+                username=="admin"
                 and
-                password == ADMIN_PASSWORD
+                password=="admin123"
             ):
 
-                logger.info(
-                     f"Admin login successful : {username}"
-                 )
-
-                st.session_state.logged_in = True
-                st.session_state.role = "admin"
+                st.session_state.logged_in=True
+                st.session_state.role="admin"
 
                 st.rerun()
 
             else:
 
-                logger.warning(
-                    f"Invalid admin login : {username}"
-                )
-
                 st.error("Invalid Admin credentials.")
 
-                
     with c2:
 
         if st.button(
@@ -176,24 +159,18 @@ AI-powered knowledge reuse for managed services operations
         ):
 
             if (
-                username == ADVOCATE_USERNAME
+                username=="advocate"
                 and
-                password == ADVOCATE_PASSWORD
+                password=="advocate123"
             ):
-
-                logger.info(
-                    f"Advocate login successful : {username}"
-                )
 
                 st.session_state.logged_in=True
                 st.session_state.role="advocate"
 
                 st.rerun()
-        
+
             else:
-                logger.warning(
-                    f"Invalid advocate login : {username}"
-                )
+
                 st.error("Invalid Advocate credentials.")
 
     st.stop()
@@ -206,9 +183,7 @@ AI-powered knowledge reuse for managed services operations
 if st.session_state.role=="admin":
 
     import admin_dashboard
-    admin_dashboard.render()
 
 else:
 
     import advocate_dashboard
-    advocate_dashboard.render()

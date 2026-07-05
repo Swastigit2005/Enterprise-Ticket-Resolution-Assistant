@@ -6,3 +6,4 @@ chroma_eval_db/
 *.pyc
 *.xlsx
 *.csv
+config.ini

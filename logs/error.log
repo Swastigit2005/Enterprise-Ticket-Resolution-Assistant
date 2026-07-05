@@ -1,0 +1,883 @@
+2026-06-30 19:50:40,422 | ERROR | GET Failed : /admin/stats
+Traceback (most recent call last):
+  File "D:\Persistent System\venv\Lib\site-packages\urllib3\connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\urllib3\connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swast\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1374, in getresponse
+    response.begin()
+  File "C:\Users\swast\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 318, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swast\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 279, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swast\AppData\Local\Programs\Python\Python311\Lib\socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Persistent System\venv\Lib\site-packages\requests\adapters.py", line 696, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\urllib3\connectionpool.py", line 842, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\urllib3\util\retry.py", line 498, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\urllib3\util\util.py", line 39, in reraise
+    raise value
+  File "D:\Persistent System\venv\Lib\site-packages\urllib3\connectionpool.py", line 788, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\urllib3\connectionpool.py", line 536, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "D:\Persistent System\venv\Lib\site-packages\urllib3\connectionpool.py", line 367, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='127.0.0.1', port=8001): Read timed out. (read timeout=30)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Persistent System\admin_dashboard.py", line 30, in api_get
+    response = requests.get(
+               ^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\requests\api.py", line 87, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\requests\api.py", line 71, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\requests\sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\requests\sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\requests\adapters.py", line 742, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPConnectionPool(host='127.0.0.1', port=8001): Read timed out. (read timeout=30)
+2026-06-30 19:50:40,622 | ERROR | Unable to load admin dashboard
+Traceback (most recent call last):
+  File "D:\Persistent System\venv\Lib\site-packages\urllib3\connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\urllib3\connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swast\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1374, in getresponse
+    response.begin()
+  File "C:\Users\swast\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 318, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swast\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 279, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swast\AppData\Local\Programs\Python\Python311\Lib\socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Persistent System\venv\Lib\site-packages\requests\adapters.py", line 696, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\urllib3\connectionpool.py", line 842, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\urllib3\util\retry.py", line 498, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\urllib3\util\util.py", line 39, in reraise
+    raise value
+  File "D:\Persistent System\venv\Lib\site-packages\urllib3\connectionpool.py", line 788, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\urllib3\connectionpool.py", line 536, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "D:\Persistent System\venv\Lib\site-packages\urllib3\connectionpool.py", line 367, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='127.0.0.1', port=8001): Read timed out. (read timeout=30)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Persistent System\admin_dashboard.py", line 203, in render
+    stats = api_get(
+            ^^^^^^^^
+  File "D:\Persistent System\admin_dashboard.py", line 30, in api_get
+    response = requests.get(
+               ^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\requests\api.py", line 87, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\requests\api.py", line 71, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\requests\sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\requests\sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\requests\adapters.py", line 742, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPConnectionPool(host='127.0.0.1', port=8001): Read timed out. (read timeout=30)
+2026-06-30 20:06:55,083 | ERROR | GET Failed : /admin/stats
+Traceback (most recent call last):
+  File "D:\Persistent System\venv\Lib\site-packages\urllib3\connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\urllib3\connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swast\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1374, in getresponse
+    response.begin()
+  File "C:\Users\swast\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 318, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swast\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 279, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swast\AppData\Local\Programs\Python\Python311\Lib\socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Persistent System\venv\Lib\site-packages\requests\adapters.py", line 696, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\urllib3\connectionpool.py", line 842, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\urllib3\util\retry.py", line 498, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\urllib3\util\util.py", line 39, in reraise
+    raise value
+  File "D:\Persistent System\venv\Lib\site-packages\urllib3\connectionpool.py", line 788, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\urllib3\connectionpool.py", line 536, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "D:\Persistent System\venv\Lib\site-packages\urllib3\connectionpool.py", line 367, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='127.0.0.1', port=8001): Read timed out. (read timeout=30)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Persistent System\admin_dashboard.py", line 30, in api_get
+    response = requests.get(
+               ^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\requests\api.py", line 87, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\requests\api.py", line 71, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\requests\sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\requests\sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\requests\adapters.py", line 742, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPConnectionPool(host='127.0.0.1', port=8001): Read timed out. (read timeout=30)
+2026-06-30 20:06:55,087 | ERROR | Unable to load admin dashboard
+Traceback (most recent call last):
+  File "D:\Persistent System\venv\Lib\site-packages\urllib3\connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\urllib3\connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swast\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1374, in getresponse
+    response.begin()
+  File "C:\Users\swast\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 318, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swast\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 279, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swast\AppData\Local\Programs\Python\Python311\Lib\socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Persistent System\venv\Lib\site-packages\requests\adapters.py", line 696, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\urllib3\connectionpool.py", line 842, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\urllib3\util\retry.py", line 498, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\urllib3\util\util.py", line 39, in reraise
+    raise value
+  File "D:\Persistent System\venv\Lib\site-packages\urllib3\connectionpool.py", line 788, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\urllib3\connectionpool.py", line 536, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "D:\Persistent System\venv\Lib\site-packages\urllib3\connectionpool.py", line 367, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='127.0.0.1', port=8001): Read timed out. (read timeout=30)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Persistent System\admin_dashboard.py", line 195, in render
+    stats = api_get(
+            ^^^^^^^^
+  File "D:\Persistent System\admin_dashboard.py", line 30, in api_get
+    response = requests.get(
+               ^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\requests\api.py", line 87, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\requests\api.py", line 71, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\requests\sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\requests\sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\requests\adapters.py", line 742, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPConnectionPool(host='127.0.0.1', port=8001): Read timed out. (read timeout=30)
+2026-06-30 20:08:20,153 | ERROR | GET Failed : /admin/stats
+Traceback (most recent call last):
+  File "D:\Persistent System\venv\Lib\site-packages\urllib3\connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\urllib3\connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swast\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1374, in getresponse
+    response.begin()
+  File "C:\Users\swast\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 318, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swast\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 279, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swast\AppData\Local\Programs\Python\Python311\Lib\socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Persistent System\venv\Lib\site-packages\requests\adapters.py", line 696, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\urllib3\connectionpool.py", line 842, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\urllib3\util\retry.py", line 498, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\urllib3\util\util.py", line 39, in reraise
+    raise value
+  File "D:\Persistent System\venv\Lib\site-packages\urllib3\connectionpool.py", line 788, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\urllib3\connectionpool.py", line 536, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "D:\Persistent System\venv\Lib\site-packages\urllib3\connectionpool.py", line 367, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='127.0.0.1', port=8001): Read timed out. (read timeout=30)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Persistent System\admin_dashboard.py", line 30, in api_get
+    response = requests.get(
+               ^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\requests\api.py", line 87, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\requests\api.py", line 71, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\requests\sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\requests\sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\requests\adapters.py", line 742, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPConnectionPool(host='127.0.0.1', port=8001): Read timed out. (read timeout=30)
+2026-06-30 20:08:20,156 | ERROR | Unable to load admin dashboard
+Traceback (most recent call last):
+  File "D:\Persistent System\venv\Lib\site-packages\urllib3\connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\urllib3\connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swast\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1374, in getresponse
+    response.begin()
+  File "C:\Users\swast\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 318, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swast\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 279, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swast\AppData\Local\Programs\Python\Python311\Lib\socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Persistent System\venv\Lib\site-packages\requests\adapters.py", line 696, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\urllib3\connectionpool.py", line 842, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\urllib3\util\retry.py", line 498, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\urllib3\util\util.py", line 39, in reraise
+    raise value
+  File "D:\Persistent System\venv\Lib\site-packages\urllib3\connectionpool.py", line 788, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\urllib3\connectionpool.py", line 536, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "D:\Persistent System\venv\Lib\site-packages\urllib3\connectionpool.py", line 367, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='127.0.0.1', port=8001): Read timed out. (read timeout=30)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Persistent System\admin_dashboard.py", line 193, in render
+    stats = api_get(
+            ^^^^^^^^
+  File "D:\Persistent System\admin_dashboard.py", line 30, in api_get
+    response = requests.get(
+               ^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\requests\api.py", line 87, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\requests\api.py", line 71, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\requests\sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\requests\sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\venv\Lib\site-packages\requests\adapters.py", line 742, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPConnectionPool(host='127.0.0.1', port=8001): Read timed out. (read timeout=30)
+2026-07-01 15:22:20,156 | ERROR | GET request failed : /tickets
+Traceback (most recent call last):
+  File "D:\Persistent System\advocate_dashboard.py", line 45, in api_get
+    response.raise_for_status()
+  File "D:\Persistent System\venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: http://127.0.0.1:8001/tickets
+2026-07-01 15:22:20,177 | ERROR | Unable to load ticket queue.
+Traceback (most recent call last):
+  File "D:\Persistent System\advocate_dashboard.py", line 391, in render_queue
+    tickets = api_get("/tickets")
+              ^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\advocate_dashboard.py", line 45, in api_get
+    response.raise_for_status()
+  File "D:\Persistent System\venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: http://127.0.0.1:8001/tickets
+2026-07-01 15:22:37,433 | ERROR | GET request failed : /tickets
+Traceback (most recent call last):
+  File "D:\Persistent System\advocate_dashboard.py", line 45, in api_get
+    response.raise_for_status()
+  File "D:\Persistent System\venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: http://127.0.0.1:8001/tickets
+2026-07-01 15:22:37,434 | ERROR | Unable to load ticket queue.
+Traceback (most recent call last):
+  File "D:\Persistent System\advocate_dashboard.py", line 391, in render_queue
+    tickets = api_get("/tickets")
+              ^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\advocate_dashboard.py", line 45, in api_get
+    response.raise_for_status()
+  File "D:\Persistent System\venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: http://127.0.0.1:8001/tickets
+2026-07-04 23:23:01,620 | ERROR | Database connection failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-04 23:23:01,621 | ERROR | Database connection failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-04 23:23:01,621 | ERROR | Database connection failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-04 23:23:01,621 | ERROR | Database connection failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-04 23:23:01,650 | ERROR | Database query failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 40, in execute_query
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-04 23:23:01,650 | ERROR | Database query failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 40, in execute_query
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-04 23:23:01,651 | ERROR | Database query failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 40, in execute_query
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-04 23:23:01,651 | ERROR | Database query failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 40, in execute_query
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-04 23:23:01,651 | ERROR | Database connection failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-04 23:23:01,652 | ERROR | Database query failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 40, in execute_query
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-04 23:23:01,658 | ERROR | Database connection failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-04 23:23:01,658 | ERROR | Failed to load admin dashboard statistics.
+Traceback (most recent call last):
+  File "D:\Persistent System\ticket_api.py", line 595, in admin_stats
+    ) = await asyncio.gather(
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swast\AppData\Local\Programs\Python\Python311\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swast\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 40, in execute_query
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-04 23:23:01,658 | ERROR | Database query failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 40, in execute_query
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-04 23:23:01,680 | ERROR | GET Failed : /admin/stats
+Traceback (most recent call last):
+  File "D:\Persistent System\admin_dashboard.py", line 35, in api_get
+    response.raise_for_status()
+  File "D:\Persistent System\venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http://127.0.0.1:8001/admin/stats
+2026-07-04 23:23:01,681 | ERROR | Unable to load admin dashboard
+Traceback (most recent call last):
+  File "D:\Persistent System\admin_dashboard.py", line 193, in render
+    stats = api_get(
+            ^^^^^^^^
+  File "D:\Persistent System\admin_dashboard.py", line 35, in api_get
+    response.raise_for_status()
+  File "D:\Persistent System\venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http://127.0.0.1:8001/admin/stats
+2026-07-04 23:23:16,515 | ERROR | Database connection failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-04 23:23:16,515 | ERROR | Database query failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 40, in execute_query
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-04 23:23:16,515 | ERROR | Failed to fetch all tickets.
+Traceback (most recent call last):
+  File "D:\Persistent System\ticket_api.py", line 59, in get_all_tickets
+    return await asyncio.to_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swast\AppData\Local\Programs\Python\Python311\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swast\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 40, in execute_query
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-04 23:23:16,517 | ERROR | GET request failed : /tickets
+Traceback (most recent call last):
+  File "D:\Persistent System\advocate_dashboard.py", line 45, in api_get
+    response.raise_for_status()
+  File "D:\Persistent System\venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http://127.0.0.1:8001/tickets
+2026-07-04 23:23:16,518 | ERROR | Unable to load ticket queue.
+Traceback (most recent call last):
+  File "D:\Persistent System\advocate_dashboard.py", line 391, in render_queue
+    tickets = api_get("/tickets")
+              ^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\advocate_dashboard.py", line 45, in api_get
+    response.raise_for_status()
+  File "D:\Persistent System\venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http://127.0.0.1:8001/tickets
+2026-07-05 19:52:04,884 | ERROR | Database connection failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-05 19:52:04,884 | ERROR | Database query failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 40, in execute_query
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-05 19:52:04,887 | ERROR | Failed to fetch all tickets.
+Traceback (most recent call last):
+  File "D:\Persistent System\ticket_api.py", line 59, in get_all_tickets
+    return await asyncio.to_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swast\AppData\Local\Programs\Python\Python311\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swast\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 40, in execute_query
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-05 19:52:04,891 | ERROR | GET request failed : /tickets
+Traceback (most recent call last):
+  File "D:\Persistent System\advocate_dashboard.py", line 45, in api_get
+    response.raise_for_status()
+  File "D:\Persistent System\venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http://127.0.0.1:8001/tickets
+2026-07-05 19:52:04,896 | ERROR | Unable to load ticket queue.
+Traceback (most recent call last):
+  File "D:\Persistent System\advocate_dashboard.py", line 391, in render_queue
+    tickets = api_get("/tickets")
+              ^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\advocate_dashboard.py", line 45, in api_get
+    response.raise_for_status()
+  File "D:\Persistent System\venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http://127.0.0.1:8001/tickets
+2026-07-05 19:52:08,654 | ERROR | Database connection failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-05 19:52:08,654 | ERROR | Database query failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 40, in execute_query
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-05 19:52:08,655 | ERROR | Failed to fetch open tickets.
+Traceback (most recent call last):
+  File "D:\Persistent System\ticket_api.py", line 96, in get_open_tickets
+    return await asyncio.to_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swast\AppData\Local\Programs\Python\Python311\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swast\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 40, in execute_query
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-05 19:52:08,657 | ERROR | GET request failed : /tickets/open
+Traceback (most recent call last):
+  File "D:\Persistent System\advocate_dashboard.py", line 45, in api_get
+    response.raise_for_status()
+  File "D:\Persistent System\venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http://127.0.0.1:8001/tickets/open
+2026-07-05 19:52:08,659 | ERROR | Unable to load ticket queue.
+Traceback (most recent call last):
+  File "D:\Persistent System\advocate_dashboard.py", line 395, in render_queue
+    tickets = api_get("/tickets/open")
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\advocate_dashboard.py", line 45, in api_get
+    response.raise_for_status()
+  File "D:\Persistent System\venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http://127.0.0.1:8001/tickets/open
+2026-07-05 19:52:10,064 | ERROR | Database connection failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-05 19:52:10,065 | ERROR | Database query failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 40, in execute_query
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-05 19:52:10,065 | ERROR | Failed to fetch all tickets.
+Traceback (most recent call last):
+  File "D:\Persistent System\ticket_api.py", line 59, in get_all_tickets
+    return await asyncio.to_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swast\AppData\Local\Programs\Python\Python311\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swast\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 40, in execute_query
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-05 19:52:10,067 | ERROR | GET request failed : /tickets
+Traceback (most recent call last):
+  File "D:\Persistent System\advocate_dashboard.py", line 45, in api_get
+    response.raise_for_status()
+  File "D:\Persistent System\venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http://127.0.0.1:8001/tickets
+2026-07-05 19:52:10,070 | ERROR | Unable to load ticket queue.
+Traceback (most recent call last):
+  File "D:\Persistent System\advocate_dashboard.py", line 391, in render_queue
+    tickets = api_get("/tickets")
+              ^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\advocate_dashboard.py", line 45, in api_get
+    response.raise_for_status()
+  File "D:\Persistent System\venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http://127.0.0.1:8001/tickets
+2026-07-05 19:52:55,951 | ERROR | Database connection failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-05 19:52:55,951 | ERROR | Database connection failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-05 19:52:55,951 | ERROR | Database connection failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-05 19:52:55,951 | ERROR | Database query failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 40, in execute_query
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-05 19:52:55,951 | ERROR | Database connection failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-05 19:52:55,951 | ERROR | Database connection failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-05 19:52:55,953 | ERROR | Database connection failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-05 19:52:55,953 | ERROR | Database query failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 40, in execute_query
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-05 19:52:55,953 | ERROR | Database query failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 40, in execute_query
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-05 19:52:55,953 | ERROR | Database query failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 40, in execute_query
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-05 19:52:55,953 | ERROR | Failed to load admin dashboard statistics.
+Traceback (most recent call last):
+  File "D:\Persistent System\ticket_api.py", line 595, in admin_stats
+    ) = await asyncio.gather(
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swast\AppData\Local\Programs\Python\Python311\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swast\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 40, in execute_query
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-05 19:52:55,956 | ERROR | Database query failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 40, in execute_query
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-05 19:52:55,956 | ERROR | Database query failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 40, in execute_query
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-05 19:52:55,994 | ERROR | GET Failed : /admin/stats
+Traceback (most recent call last):
+  File "D:\Persistent System\admin_dashboard.py", line 35, in api_get
+    response.raise_for_status()
+  File "D:\Persistent System\venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http://127.0.0.1:8001/admin/stats
+2026-07-05 19:52:55,994 | ERROR | Unable to load admin dashboard
+Traceback (most recent call last):
+  File "D:\Persistent System\admin_dashboard.py", line 193, in render
+    stats = api_get(
+            ^^^^^^^^
+  File "D:\Persistent System\admin_dashboard.py", line 35, in api_get
+    response.raise_for_status()
+  File "D:\Persistent System\venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http://127.0.0.1:8001/admin/stats

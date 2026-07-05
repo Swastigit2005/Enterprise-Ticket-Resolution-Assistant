@@ -1,0 +1,604 @@
+2026-06-30 20:08:29,581 | WARNING | Invalid advocate login : 
+2026-06-30 20:08:35,270 | WARNING | Invalid advocate login : admin
+2026-06-30 20:08:38,921 | WARNING | Invalid advocate login : admin
+2026-06-30 20:08:39,111 | INFO | Admin login successful : admin
+2026-06-30 20:08:39,146 | INFO | Loading admin statistics...
+2026-06-30 20:08:39,146 | INFO | GET /admin/stats
+2026-06-30 20:08:43,057 | INFO | Loading admin statistics...
+2026-06-30 20:08:43,058 | INFO | GET /admin/stats
+2026-06-30 20:08:43,248 | INFO | Loading admin statistics...
+2026-06-30 20:08:43,248 | INFO | GET /admin/stats
+2026-06-30 20:08:44,491 | INFO | Loading admin statistics...
+2026-06-30 20:08:44,491 | INFO | GET /admin/stats
+2026-06-30 20:08:44,551 | INFO | Knowledge ingestion requested by Admin
+2026-06-30 20:08:44,551 | INFO | POST /admin/trigger-ingestion
+2026-06-30 20:08:56,541 | WARNING | Invalid advocate login : 
+2026-06-30 20:09:02,797 | WARNING | Invalid advocate login : advocate
+2026-06-30 20:09:06,471 | WARNING | Invalid advocate login : advocate
+2026-06-30 20:09:06,683 | INFO | Advocate login successful : advocate
+2026-06-30 20:09:33,542 | INFO | Ticket opened : INC2373555
+2026-06-30 20:09:40,308 | INFO | Resolution generated : INC2373555
+2026-06-30 20:09:42,644 | INFO | Opened source ticket : INC2373555
+2026-06-30 20:09:46,025 | INFO | Opened source ticket : INC2373555
+2026-06-30 20:09:55,880 | INFO | Back button clicked from ticket INC2373555
+2026-06-30 20:09:56,179 | INFO | Back button clicked from ticket INC2373555
+2026-06-30 20:10:02,035 | INFO | Back button clicked from ticket INC2373555
+2026-07-01 02:08:58,557 | WARNING | Invalid advocate login : 
+2026-07-01 02:09:03,518 | WARNING | Invalid advocate login : advocate
+2026-07-01 02:09:10,664 | WARNING | Invalid advocate login : advocate
+2026-07-01 02:09:10,875 | INFO | Advocate login successful : advocate
+2026-07-01 02:09:33,433 | INFO | Ticket opened : INC8221845
+2026-07-01 14:14:32,369 | WARNING | Invalid advocate login : 
+2026-07-01 14:14:37,807 | WARNING | Invalid advocate login : advocate
+2026-07-01 14:14:42,098 | WARNING | Invalid advocate login : advocate
+2026-07-01 14:14:42,300 | INFO | Advocate login successful : advocate
+2026-07-01 14:14:58,436 | WARNING | Invalid advocate login : 
+2026-07-01 14:15:03,706 | WARNING | Invalid advocate login : admin
+2026-07-01 14:15:07,271 | WARNING | Invalid advocate login : admin
+2026-07-01 14:15:07,488 | INFO | Admin login successful : admin
+2026-07-01 14:15:07,542 | INFO | Loading admin statistics...
+2026-07-01 14:15:07,542 | INFO | GET /admin/stats
+2026-07-01 15:21:04,435 | WARNING | Invalid advocate login : 
+2026-07-01 15:22:13,414 | WARNING | Invalid advocate login : advocate
+2026-07-01 15:22:19,738 | WARNING | Invalid advocate login : advocate
+2026-07-01 15:22:19,961 | INFO | Advocate login successful : advocate
+2026-07-01 15:22:20,156 | ERROR | GET request failed : /tickets
+Traceback (most recent call last):
+  File "D:\Persistent System\advocate_dashboard.py", line 45, in api_get
+    response.raise_for_status()
+  File "D:\Persistent System\venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: http://127.0.0.1:8001/tickets
+2026-07-01 15:22:20,177 | ERROR | Unable to load ticket queue.
+Traceback (most recent call last):
+  File "D:\Persistent System\advocate_dashboard.py", line 391, in render_queue
+    tickets = api_get("/tickets")
+              ^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\advocate_dashboard.py", line 45, in api_get
+    response.raise_for_status()
+  File "D:\Persistent System\venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: http://127.0.0.1:8001/tickets
+2026-07-01 15:22:29,417 | WARNING | Invalid advocate login : 
+2026-07-01 15:22:33,221 | WARNING | Invalid advocate login : advocate
+2026-07-01 15:22:37,195 | WARNING | Invalid advocate login : advocate
+2026-07-01 15:22:37,410 | INFO | Advocate login successful : advocate
+2026-07-01 15:22:37,433 | ERROR | GET request failed : /tickets
+Traceback (most recent call last):
+  File "D:\Persistent System\advocate_dashboard.py", line 45, in api_get
+    response.raise_for_status()
+  File "D:\Persistent System\venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: http://127.0.0.1:8001/tickets
+2026-07-01 15:22:37,434 | ERROR | Unable to load ticket queue.
+Traceback (most recent call last):
+  File "D:\Persistent System\advocate_dashboard.py", line 391, in render_queue
+    tickets = api_get("/tickets")
+              ^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\advocate_dashboard.py", line 45, in api_get
+    response.raise_for_status()
+  File "D:\Persistent System\venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: http://127.0.0.1:8001/tickets
+2026-07-01 15:23:36,113 | WARNING | Invalid advocate login : 
+2026-07-01 15:29:48,282 | WARNING | Invalid advocate login : 
+2026-07-01 15:29:52,682 | WARNING | Invalid advocate login : advocate
+2026-07-01 15:29:55,864 | WARNING | Invalid advocate login : advocate
+2026-07-01 15:29:56,080 | INFO | Advocate login successful : advocate
+2026-07-01 15:30:04,257 | INFO | Ticket opened : INC5788474
+2026-07-01 15:30:15,710 | INFO | Resolution generated : INC5788474
+2026-07-01 15:30:15,711 | INFO | Resolution generated : INC5788474
+2026-07-01 15:30:21,478 | INFO | Resolution saved : INC5788474
+2026-07-01 15:30:21,478 | INFO | Resolution saved : INC5788474
+2026-07-01 15:30:23,159 | INFO | Opened source ticket : INC2225232
+2026-07-01 15:30:25,932 | INFO | Back button clicked from ticket INC2225232
+2026-07-01 15:30:26,720 | INFO | Back button clicked from ticket INC5788474
+2026-07-01 15:30:29,289 | WARNING | Invalid advocate login : 
+2026-07-01 15:30:34,413 | WARNING | Invalid advocate login : admin
+2026-07-01 15:30:44,663 | WARNING | Invalid advocate login : admin
+2026-07-01 15:30:44,873 | INFO | Admin login successful : admin
+2026-07-01 15:30:44,931 | INFO | Loading admin statistics...
+2026-07-01 15:30:44,931 | INFO | GET /admin/stats
+2026-07-01 15:31:45,838 | INFO | Loading admin statistics...
+2026-07-01 15:31:45,838 | INFO | GET /admin/stats
+2026-07-01 15:31:45,907 | INFO | Loading admin statistics...
+2026-07-01 15:31:45,907 | INFO | GET /admin/stats
+2026-07-01 15:31:48,365 | INFO | Loading admin statistics...
+2026-07-01 15:31:48,365 | INFO | GET /admin/stats
+2026-07-01 15:31:48,383 | INFO | Knowledge ingestion requested by Admin
+2026-07-01 15:31:48,384 | INFO | POST /admin/trigger-ingestion
+2026-07-01 15:31:57,169 | INFO | Knowledge ingestion triggered.
+2026-07-01 15:31:57,171 | INFO | Knowledge ingestion completed.
+2026-07-01 15:31:57,199 | INFO | Loading admin statistics...
+2026-07-01 15:31:57,200 | INFO | GET /admin/stats
+2026-07-01 15:35:41,933 | INFO | Loading admin statistics...
+2026-07-01 15:35:41,933 | INFO | GET /admin/stats
+2026-07-01 15:36:07,607 | INFO | Advocate login successful : advocate
+2026-07-01 15:36:11,141 | INFO | Ticket opened : INC8221845
+2026-07-01 15:36:15,284 | INFO | Back button clicked from ticket INC8221845
+2026-07-01 15:36:27,032 | INFO | Admin login successful : admin
+2026-07-01 15:36:27,049 | INFO | Loading admin statistics...
+2026-07-01 15:36:27,049 | INFO | GET /admin/stats
+2026-07-01 15:36:52,244 | INFO | Advocate login successful : advocate
+2026-07-01 16:04:10,531 | INFO | Admin login successful : admin
+2026-07-01 16:04:10,559 | INFO | Loading admin statistics...
+2026-07-01 16:04:10,559 | INFO | GET /admin/stats
+2026-07-01 16:04:27,506 | WARNING | Invalid advocate login : 
+2026-07-01 16:04:36,509 | INFO | Advocate login successful : advocate
+2026-07-01 16:04:51,759 | INFO | Ticket opened : INC2373555
+2026-07-01 16:04:59,590 | INFO | Resolution generated : INC2373555
+2026-07-01 16:04:59,590 | INFO | Resolution generated : INC2373555
+2026-07-01 16:05:03,660 | INFO | Resolution saved : INC2373555
+2026-07-01 16:05:03,662 | INFO | Resolution saved : INC2373555
+2026-07-01 16:05:05,601 | INFO | Opened source ticket : INC2373555
+2026-07-01 16:05:09,153 | INFO | Back button clicked from ticket INC2373555
+2026-07-04 23:23:01,381 | INFO | Admin login successful : admin
+2026-07-04 23:23:01,596 | INFO | Loading admin statistics...
+2026-07-04 23:23:01,596 | INFO | GET /admin/stats
+2026-07-04 23:23:01,620 | ERROR | Database connection failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-04 23:23:01,621 | ERROR | Database connection failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-04 23:23:01,621 | ERROR | Database connection failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-04 23:23:01,621 | ERROR | Database connection failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-04 23:23:01,650 | ERROR | Database query failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 40, in execute_query
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-04 23:23:01,650 | ERROR | Database query failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 40, in execute_query
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-04 23:23:01,651 | ERROR | Database query failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 40, in execute_query
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-04 23:23:01,651 | ERROR | Database query failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 40, in execute_query
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-04 23:23:01,651 | ERROR | Database connection failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-04 23:23:01,652 | ERROR | Database query failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 40, in execute_query
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-04 23:23:01,658 | ERROR | Database connection failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-04 23:23:01,658 | ERROR | Failed to load admin dashboard statistics.
+Traceback (most recent call last):
+  File "D:\Persistent System\ticket_api.py", line 595, in admin_stats
+    ) = await asyncio.gather(
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swast\AppData\Local\Programs\Python\Python311\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swast\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 40, in execute_query
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-04 23:23:01,658 | ERROR | Database query failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 40, in execute_query
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-04 23:23:01,680 | ERROR | GET Failed : /admin/stats
+Traceback (most recent call last):
+  File "D:\Persistent System\admin_dashboard.py", line 35, in api_get
+    response.raise_for_status()
+  File "D:\Persistent System\venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http://127.0.0.1:8001/admin/stats
+2026-07-04 23:23:01,681 | ERROR | Unable to load admin dashboard
+Traceback (most recent call last):
+  File "D:\Persistent System\admin_dashboard.py", line 193, in render
+    stats = api_get(
+            ^^^^^^^^
+  File "D:\Persistent System\admin_dashboard.py", line 35, in api_get
+    response.raise_for_status()
+  File "D:\Persistent System\venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http://127.0.0.1:8001/admin/stats
+2026-07-04 23:23:16,450 | INFO | Advocate login successful : advocate
+2026-07-04 23:23:16,515 | ERROR | Database connection failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-04 23:23:16,515 | ERROR | Database query failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 40, in execute_query
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-04 23:23:16,515 | ERROR | Failed to fetch all tickets.
+Traceback (most recent call last):
+  File "D:\Persistent System\ticket_api.py", line 59, in get_all_tickets
+    return await asyncio.to_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swast\AppData\Local\Programs\Python\Python311\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swast\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 40, in execute_query
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-04 23:23:16,517 | ERROR | GET request failed : /tickets
+Traceback (most recent call last):
+  File "D:\Persistent System\advocate_dashboard.py", line 45, in api_get
+    response.raise_for_status()
+  File "D:\Persistent System\venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http://127.0.0.1:8001/tickets
+2026-07-04 23:23:16,518 | ERROR | Unable to load ticket queue.
+Traceback (most recent call last):
+  File "D:\Persistent System\advocate_dashboard.py", line 391, in render_queue
+    tickets = api_get("/tickets")
+              ^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\advocate_dashboard.py", line 45, in api_get
+    response.raise_for_status()
+  File "D:\Persistent System\venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http://127.0.0.1:8001/tickets
+2026-07-05 19:52:04,801 | INFO | Advocate login successful : advocate
+2026-07-05 19:52:04,884 | ERROR | Database connection failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-05 19:52:04,884 | ERROR | Database query failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 40, in execute_query
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-05 19:52:04,887 | ERROR | Failed to fetch all tickets.
+Traceback (most recent call last):
+  File "D:\Persistent System\ticket_api.py", line 59, in get_all_tickets
+    return await asyncio.to_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swast\AppData\Local\Programs\Python\Python311\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swast\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 40, in execute_query
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-05 19:52:04,891 | ERROR | GET request failed : /tickets
+Traceback (most recent call last):
+  File "D:\Persistent System\advocate_dashboard.py", line 45, in api_get
+    response.raise_for_status()
+  File "D:\Persistent System\venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http://127.0.0.1:8001/tickets
+2026-07-05 19:52:04,896 | ERROR | Unable to load ticket queue.
+Traceback (most recent call last):
+  File "D:\Persistent System\advocate_dashboard.py", line 391, in render_queue
+    tickets = api_get("/tickets")
+              ^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\advocate_dashboard.py", line 45, in api_get
+    response.raise_for_status()
+  File "D:\Persistent System\venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http://127.0.0.1:8001/tickets
+2026-07-05 19:52:08,654 | ERROR | Database connection failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-05 19:52:08,654 | ERROR | Database query failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 40, in execute_query
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-05 19:52:08,655 | ERROR | Failed to fetch open tickets.
+Traceback (most recent call last):
+  File "D:\Persistent System\ticket_api.py", line 96, in get_open_tickets
+    return await asyncio.to_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swast\AppData\Local\Programs\Python\Python311\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swast\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 40, in execute_query
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-05 19:52:08,657 | ERROR | GET request failed : /tickets/open
+Traceback (most recent call last):
+  File "D:\Persistent System\advocate_dashboard.py", line 45, in api_get
+    response.raise_for_status()
+  File "D:\Persistent System\venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http://127.0.0.1:8001/tickets/open
+2026-07-05 19:52:08,659 | ERROR | Unable to load ticket queue.
+Traceback (most recent call last):
+  File "D:\Persistent System\advocate_dashboard.py", line 395, in render_queue
+    tickets = api_get("/tickets/open")
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\advocate_dashboard.py", line 45, in api_get
+    response.raise_for_status()
+  File "D:\Persistent System\venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http://127.0.0.1:8001/tickets/open
+2026-07-05 19:52:10,064 | ERROR | Database connection failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-05 19:52:10,065 | ERROR | Database query failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 40, in execute_query
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-05 19:52:10,065 | ERROR | Failed to fetch all tickets.
+Traceback (most recent call last):
+  File "D:\Persistent System\ticket_api.py", line 59, in get_all_tickets
+    return await asyncio.to_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swast\AppData\Local\Programs\Python\Python311\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swast\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 40, in execute_query
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-05 19:52:10,067 | ERROR | GET request failed : /tickets
+Traceback (most recent call last):
+  File "D:\Persistent System\advocate_dashboard.py", line 45, in api_get
+    response.raise_for_status()
+  File "D:\Persistent System\venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http://127.0.0.1:8001/tickets
+2026-07-05 19:52:10,070 | ERROR | Unable to load ticket queue.
+Traceback (most recent call last):
+  File "D:\Persistent System\advocate_dashboard.py", line 391, in render_queue
+    tickets = api_get("/tickets")
+              ^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\advocate_dashboard.py", line 45, in api_get
+    response.raise_for_status()
+  File "D:\Persistent System\venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http://127.0.0.1:8001/tickets
+2026-07-05 19:52:55,923 | INFO | Admin login successful : admin
+2026-07-05 19:52:55,937 | INFO | Loading admin statistics...
+2026-07-05 19:52:55,937 | INFO | GET /admin/stats
+2026-07-05 19:52:55,951 | ERROR | Database connection failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-05 19:52:55,951 | ERROR | Database connection failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-05 19:52:55,951 | ERROR | Database connection failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-05 19:52:55,951 | ERROR | Database query failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 40, in execute_query
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-05 19:52:55,951 | ERROR | Database connection failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-05 19:52:55,951 | ERROR | Database connection failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-05 19:52:55,953 | ERROR | Database connection failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-05 19:52:55,953 | ERROR | Database query failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 40, in execute_query
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-05 19:52:55,953 | ERROR | Database query failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 40, in execute_query
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-05 19:52:55,953 | ERROR | Database query failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 40, in execute_query
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-05 19:52:55,953 | ERROR | Failed to load admin dashboard statistics.
+Traceback (most recent call last):
+  File "D:\Persistent System\ticket_api.py", line 595, in admin_stats
+    ) = await asyncio.gather(
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swast\AppData\Local\Programs\Python\Python311\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swast\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 40, in execute_query
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-05 19:52:55,956 | ERROR | Database query failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 40, in execute_query
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-05 19:52:55,956 | ERROR | Database query failed
+Traceback (most recent call last):
+  File "D:\Persistent System\db.py", line 40, in execute_query
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "D:\Persistent System\db.py", line 13, in get_connection
+    host=MYSQL_CONFIG["host"],
+         ^^^^^^^^^^^^
+NameError: name 'MYSQL_CONFIG' is not defined
+2026-07-05 19:52:55,994 | ERROR | GET Failed : /admin/stats
+Traceback (most recent call last):
+  File "D:\Persistent System\admin_dashboard.py", line 35, in api_get
+    response.raise_for_status()
+  File "D:\Persistent System\venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http://127.0.0.1:8001/admin/stats
+2026-07-05 19:52:55,994 | ERROR | Unable to load admin dashboard
+Traceback (most recent call last):
+  File "D:\Persistent System\admin_dashboard.py", line 193, in render
+    stats = api_get(
+            ^^^^^^^^
+  File "D:\Persistent System\admin_dashboard.py", line 35, in api_get
+    response.raise_for_status()
+  File "D:\Persistent System\venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http://127.0.0.1:8001/admin/stats
+2026-07-05 20:22:41,523 | INFO | Advocate login successful : advocate
+2026-07-05 20:23:03,807 | INFO | Ticket opened : INC2373555
+2026-07-05 20:23:08,799 | INFO | Back button clicked from ticket INC2373555
+2026-07-05 20:24:16,424 | INFO | Advocate login successful : advocate
+2026-07-05 20:27:41,411 | INFO | Ticket opened : INC5788474
+2026-07-05 20:27:48,402 | INFO | Back button clicked from ticket INC5788474
+2026-07-05 20:27:57,895 | INFO | Ticket opened : INC8201433
+2026-07-05 20:28:35,052 | INFO | Resolution generated : INC8201433
+2026-07-05 20:28:35,077 | INFO | Resolution generated : INC8201433
+2026-07-05 20:28:48,293 | INFO | Ticket resolved : INC8201433
+2026-07-05 20:28:48,293 | INFO | Ticket resolved : INC8201433
+2026-07-05 20:29:00,492 | INFO | Opened source ticket : INC6161977
