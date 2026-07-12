@@ -5,7 +5,7 @@ from fastapi import BackgroundTasks
 from pydantic import BaseModel
 import asyncio
 from db import execute_query
-from inference import resolve_issue
+from inference import diagnose_retrieval, resolve_issue
 from logger import logger
 
 # ==========================================
@@ -354,7 +354,21 @@ async def generate_resolution(
 
             "resolution_generated": generated_resolution,
 
-            "source_tickets": source_tickets
+            "source_tickets": source_tickets,
+
+            "status": result.get("status", "resolved"),
+
+            "resolution_available": result.get("resolution_available", False),
+
+            "confidence": result.get("confidence", 0.0),
+
+            "validation_feedback": result.get("validation_feedback", ""),
+
+            "human_handoff": result.get("human_handoff", False),
+
+            "handoff_reason": result.get("handoff_reason"),
+
+            "agent_diagnostics": result.get("agent_diagnostics", {})
 
         }
 
@@ -372,6 +386,46 @@ async def generate_resolution(
             status_code=500,
             detail="Unable to generate resolution."
         )
+
+# ==========================================
+# RETRIEVAL DIAGNOSTICS
+# ==========================================
+
+@app.get("/ticket/{ticket_id}/retrieval-diagnostics")
+async def retrieval_diagnostics(ticket_id: str):
+
+    try:
+        ticket = await asyncio.to_thread(
+            execute_query,
+            """
+            SELECT issue_description
+            FROM tickets
+            WHERE ticket_id=%s
+            """,
+            (ticket_id,),
+            True
+        )
+
+        if not ticket:
+            raise HTTPException(status_code=404, detail="Ticket not found.")
+
+        return await asyncio.to_thread(
+            diagnose_retrieval,
+            ticket["issue_description"]
+        )
+
+    except HTTPException:
+        raise
+
+    except Exception:
+        logger.exception(
+            f"Retrieval diagnostics failed : {ticket_id}"
+        )
+        raise HTTPException(
+            status_code=500,
+            detail="Unable to run retrieval diagnostics."
+        )
+
 
 # ==========================================
 # SOURCE REFERENCES

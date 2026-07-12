@@ -12,8 +12,10 @@ config.read("config.ini")
 # API KEY
 # =====================================================
 
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
-
+GROQ_API_KEY = (
+    os.getenv("GROQ_API_KEY")
+    or config["GROQ"]["API_KEY"]
+)
 # =====================================================
 # SERVER
 # =====================================================
@@ -89,3 +91,5 @@ WHERE ingested = FALSE
 AND status='Resolved'
 """
 
+
+MODEL_NAME = config["LLM"]["MODEL"]

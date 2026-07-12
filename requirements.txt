@@ -1,0 +1,16 @@
+# Agent/runtime
+langchain>=1.1.0
+langgraph>=1.0.0
+langchain-groq>=1.0.0
+pydantic>=2.7.0
+
+# Existing project dependencies
+chromadb>=1.0.0
+sentence-transformers>=3.0.0
+transformers>=4.51.0
+python-dotenv>=1.0.0
+mysql-connector-python>=9.0.0
+fastapi>=0.115.0
+uvicorn>=0.30.0
+streamlit>=1.40.0
+requests>=2.32.0

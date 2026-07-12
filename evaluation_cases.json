@@ -1,0 +1,63 @@
+[
+  {
+    "case_id": "E001_resolvable_single_issue",
+    "member_issue": "A member wants to know whether a cardiac stress test requires prior authorization and a referral under the plan.",
+    "expected_status": "resolved",
+    "relevant_ticket_ids": [
+      "REPLACE_WITH_REAL_TICKET_ID"
+    ],
+    "required_concerns": [
+      "prior authorization",
+      "referral"
+    ],
+    "forbidden_phrases": [
+      "Northstar Imaging"
+    ],
+    "min_steps": 5,
+    "max_steps": 8,
+    "notes": "Replace the reference ticket with a human-labelled relevant historical ticket."
+  },
+  {
+    "case_id": "E002_multi_issue",
+    "member_issue": "The member reports both an eligibility concern and a claim denial related to missing authorization.",
+    "expected_status": "resolved",
+    "relevant_ticket_ids": [
+      "REPLACE_WITH_REAL_TICKET_ID"
+    ],
+    "required_concerns": [
+      "eligibility",
+      "authorization",
+      "denial"
+    ],
+    "forbidden_phrases": [],
+    "min_steps": 5,
+    "max_steps": 8
+  },
+  {
+    "case_id": "E003_insufficient_context",
+    "member_issue": "The member asks about a completely unsupported issue that has no similar resolved ticket in the knowledge base.",
+    "expected_status": "human_handoff",
+    "relevant_ticket_ids": [],
+    "required_concerns": [],
+    "forbidden_phrases": [],
+    "min_steps": 0,
+    "max_steps": 1
+  },
+  {
+    "case_id": "E004_entity_generalization",
+    "member_issue": "A member needs a reusable workflow for checking imaging-service coverage.",
+    "expected_status": "resolved",
+    "relevant_ticket_ids": [
+      "REPLACE_WITH_REAL_TICKET_ID"
+    ],
+    "required_concerns": [
+      "coverage"
+    ],
+    "forbidden_phrases": [
+      "Northstar Imaging",
+      "Green Valley Medical Center"
+    ],
+    "min_steps": 5,
+    "max_steps": 8
+  }
+]

@@ -1,4 +1,3 @@
-
 import requests
 import streamlit as st
 
@@ -26,6 +25,9 @@ def render():
 
     if "resolution_text" not in st.session_state:
         st.session_state.resolution_text = ""
+
+    if "agent_result" not in st.session_state:
+        st.session_state.agent_result = {}
 
     if "navigation_stack" not in st.session_state:
         st.session_state.navigation_stack = []
@@ -493,6 +495,7 @@ def render():
                     )
 
                     st.session_state.resolution_text = ""
+                    st.session_state.agent_result = {}
 
                     st.session_state.page = "ticket"
 
@@ -541,6 +544,7 @@ def render():
                 st.session_state.selected_ticket = None
 
             st.session_state.resolution_text = ""
+            st.session_state.agent_result = {}
             st.rerun()
 
         st.markdown(
@@ -627,6 +631,7 @@ def render():
                         ""
                     )
                 )
+                st.session_state.agent_result = result
 
                 logger.info(
                     f"Resolution generated : {ticket_id}"
@@ -647,6 +652,23 @@ def render():
             st.session_state.resolution_text = (
             ticket.get("resolution_final", "")
             or ""
+            )
+
+        agent_result = st.session_state.get("agent_result", {})
+        if agent_result.get("human_handoff"):
+            st.warning(
+                agent_result.get("handoff_reason")
+                or agent_result.get("validation_feedback")
+                or "The agent could not approve an automatic resolution."
+            )
+            diagnostics = agent_result.get("agent_diagnostics") or {}
+            if diagnostics:
+                with st.expander("Agent diagnostics"):
+                    st.json(diagnostics)
+        elif agent_result.get("resolution_available"):
+            st.success(
+                f"Validated autonomous resolution generated "
+                f"(confidence: {agent_result.get('confidence', 0):.2f})."
             )
         st.markdown("""
     <div style="
