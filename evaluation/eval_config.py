@@ -41,7 +41,3 @@ GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 # ==========================================
 # PRODUCTION PROMPT
 # ==========================================
-
-from prompt import (
-    PRODUCTION_PROMPT_V7
-)

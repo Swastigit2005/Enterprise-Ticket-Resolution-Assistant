@@ -283,11 +283,19 @@ async def generate_resolution(
                 detail="Ticket not found."
             )
 
-        result = await asyncio.to_thread(
-            resolve_issue,
-            ticket["issue_description"]
+        issue_text = (
+            f"Issue Title: "
+            f"{ticket.get('issue_title', '')}\n"
+            f"Issue Category: "
+            f"{ticket.get('issue_category', '')}\n"
+            f"Issue Description: "
+            f"{ticket.get('issue_description', '')}"
         )
 
+        result = await asyncio.to_thread(
+            resolve_issue,
+            issue_text
+        )
         generated_resolution = result.get(
             "recommended_resolution",
             ""
